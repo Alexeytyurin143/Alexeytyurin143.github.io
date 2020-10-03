@@ -9,7 +9,7 @@ body {
 	box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, figure {
 	margin: 0;
 }
 
@@ -118,6 +118,12 @@ blockquote {
 	text-decoration: underline;
 }
 
+.intro_post {
+	background: url("images/post_header.jpg") no-repeat;
+	min-height: 581px;
+	width: 100%;
+	background-size: cover;
+}
 
 /* Articles */
 
@@ -144,6 +150,15 @@ blockquote {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 49px;
+}
+
+.articles a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.articles a:hover {
+	text-decoration: underline;
 }
 
 .article_item {
@@ -173,7 +188,7 @@ blockquote {
 	width: 357px;
 }
 
-.article_footer {
+.article_info {
 	display: flex;
 	justify-content: space-between;
 	width: 387px;
@@ -242,7 +257,7 @@ blockquote {
 }
 
 blockquote {
-	font-family: Open Sans;
+	font-family: "Open Sans";
 	font-style: italic;
 	font-size: 30px;
 	line-height: 40px;
@@ -350,7 +365,7 @@ blockquote::before {
 	border-radius: 10px;
 	width: 407px;
 	height: 63px;
-	font-family: Open Sans;
+	font-family: "Open Sans";
 	font-size: 16px;
 	line-height: 22px;
 	padding: 19px;
@@ -359,6 +374,7 @@ blockquote::before {
 .form textarea {
 	width: 837px;
 	height: 293px;
+	resize: none;
 }
 
 .form h4 {
@@ -420,4 +436,199 @@ blockquote::before {
 	color: #2E2F22;
 	font-size: 18px;
 	line-height: 25px;
+}
+
+/* Article */
+
+
+.article_body {
+	width: 1000px;
+}
+
+.article_body .article_info {
+	width: 316px;
+	line-height: 40px;
+	margin-bottom: 42px;
+}
+
+.article_body p {
+	margin-bottom: 26px;
+    line-height: 26px;
+}
+
+.article_body figure {
+	margin-top: 40px;
+	margin-bottom: 35px;
+}
+
+figcaption {
+	font-size: 14px;
+	line-height: 35px;
+}
+
+.like {
+	border: 0;
+	background: none;
+	padding: 0;
+	margin-top: 16px;
+    font-size: 24px;
+    font-family: "Open Sans";
+    position: relative;
+}
+
+.like span {
+	position: absolute;
+	bottom: 4px;
+    left: 64px;
+}
+
+.like:hover {
+	cursor: pointer;
+}
+
+.article_icons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.article_links {
+	margin-top: 16px;
+}
+
+.link {
+	margin-left: 34px;
+}
+
+.link a {
+	text-decoration: none;
+	font-size: 0;
+}
+
+.back {
+	margin-top: 30px;
+}
+
+.back img {
+	margin-left: 24px;
+    margin-bottom: 3px;
+}
+
+.back a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.back a:hover {
+	text-decoration: underline;
+}
+
+.back h2 {
+	font-family: "Open Sans";
+	line-height: 49px;
+	font-weight: bold;
+	display: inline;
+}
+
+
+/* Comments */
+
+
+.comments_section {
+	margin-top: 65px;
+	width: 793px;
+	margin-bottom: 82px;
+}
+
+.comment img {
+	border-radius: 10px;
+}
+
+.comment {
+	position: relative;
+}
+
+.comment p {
+	position: absolute;
+	margin-top: 8px;
+}
+
+.comment:nth-child(2) {
+	margin-top: 31px;
+}
+
+.comment span {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	position: absolute;
+	top: 13px;
+    left: 63px;
+}
+
+.comments {
+	height: 429px;
+	background: #ece1e1;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 45px 0 79px 102px;
+}
+
+.comment_form {
+	margin-top: 77px;
+    margin-left: 82px;
+}
+
+.comment_form form {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.comment_form input {
+	border: none;
+	border-bottom: 1px solid #2E2F22;
+	margin-top: 34px;
+    width: 221px;
+    font-size: 16px;
+	line-height: 22px;
+	font-family: Open Sans;
+	padding-bottom: 14px;
+}
+
+.comment_form textarea {
+	width: 406px;
+	height: 208px;
+	border-radius: 10px;
+	align-self: flex-end;
+    position: absolute;
+    top: 35px;
+    font-size: 16px;
+	line-height: 22px;
+	font-family: Open Sans;
+	padding: 17px 19px;
+	resize: none;
+}
+
+.comment_form .button input {
+	border: 1px solid #202117;
+	border-radius: 10px;
+	text-transform: none;
+	padding: 0;
+}
+
+.comment_form .button {
+	margin: 0;
+	margin-top: 19px;
+	width: 225px;
+}
+
+.comments_section h3 {
+	font-size: 24px;
+	line-height: 33px;
+	font-family: "Open Sans";
+	margin-bottom: 34px;
 }
