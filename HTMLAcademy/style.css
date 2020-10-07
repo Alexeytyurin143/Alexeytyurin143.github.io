@@ -344,7 +344,7 @@ blockquote::before {
 	text-align: center;
 }
 
-.form {
+.write_me_form {
 	background: url("images/form.jpg") no-repeat;
 	margin: 0 auto;
 	margin-top: 48px;
@@ -354,12 +354,12 @@ blockquote::before {
 	margin-bottom: 81px;
 }
 
-.form label {
+.write_me_form label {
 	position: absolute;
 }
 
-.form input,
-.form textarea {
+.write_me_form input,
+.write_me_form textarea {
 	background: rgba(255, 255, 255, 0.4);
 	border: 1px solid #202117;
 	border-radius: 10px;
@@ -371,13 +371,13 @@ blockquote::before {
 	padding: 19px;
 }
 
-.form textarea {
+.write_me_form textarea {
 	width: 837px;
 	height: 293px;
 	resize: none;
 }
 
-.form h4 {
+.write_me_form h4 {
 	margin-bottom: 11px;
 }
 
@@ -408,12 +408,15 @@ blockquote::before {
 	cursor: pointer;
 }
 
-.form .button {
+.write_me_form .button {
 	position: absolute;
 	top: 485px;
     left: 386px;
 }
 
+.warning {
+	color: red;
+}
 
 /* Footer */
 
