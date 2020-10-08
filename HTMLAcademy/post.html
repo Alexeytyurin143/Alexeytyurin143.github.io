@@ -53,9 +53,8 @@
 					</p>
 				</div>
 				<div class="article_icons">
-					<button class="like">
-						<img src="images/like.png" alt="">
-						<span>16</span>
+					<button class="like" type="button">
+						<span class="likes_number">16</span>
 					</button>
 					<div class="article_links">
 						<span class="link">
@@ -84,23 +83,23 @@
 			</section> <!-- article_body -->
 
 			<section class="comments_section">
-				<div class="comments">
-					<div class="comment">
+				<ul class="comments">
+					<li class="comment">
 						<img src="images/comment1.jpg" alt="">
 						<span>Иван Петров</span>
 						<p>Отличная статья! Спасибо.</p>
-					</div>
-					<div class="comment">
+					</li>
+					<li class="comment">
 						<img src="images/comment2.jpg" alt="">
 						<span>Ксения Ксения</span>
 						<p>Отличный текст, добавила в закладки.</p>
-					</div>
-					<div class="comment">
+					</li>
+					<li class="comment">
 						<img src="images/comment3.jpg" alt="">
 						<span>Иван Иванов</span>
 						<p>Основательный материал! Можешь посоветовать какие-то книги на эту тему?</p>
-					</div>
-				</div>
+					</li>
+				</ul>
 				<div class="comment_form">
 					<h3>Оставить комментарий</h3>
 					<form action="">
@@ -109,7 +108,7 @@
 						<div class="button">
 							<input type="submit" class="submit-button">
 						</div>
-						<textarea class="textarea" name="comment" placeholder="Написать комментарий..."></textarea>
+						<textarea class="textarea" name="comment" placeholder="Написать комментарий..." maxlength="200" minlength="10"></textarea>
 					</form>
 				</div>
 			</section> <!-- comments_section -->
@@ -125,5 +124,7 @@
 			</div>
 		</footer>
 		<script src="form.js"></script>
+		<script src="comments.js"></script>
+		<script src="like.js"></script>
 	</body>
 </html>

@@ -125,11 +125,21 @@ blockquote {
 	background-size: cover;
 }
 
+
 /* Articles */
+
+
+.hidden {
+	display: none;
+}
 
 .articles_header {
 	display: flex;
 	justify-content: space-between;
+}
+
+.select:hover {
+	cursor: pointer;
 }
 
 .select {
@@ -471,18 +481,23 @@ figcaption {
 
 .like {
 	border: 0;
-	background: none;
-	padding: 0;
-	margin-top: 16px;
-    font-size: 24px;
-    font-family: "Open Sans";
-    position: relative;
+	background: url("images/like.png");
+	margin-top: 15px;
+	width: 50px;
+	height: 50px;
+	position: relative;
+}
+
+.added {
+	background: url("images/like_added.png");
 }
 
 .like span {
 	position: absolute;
-	bottom: 4px;
+	top: 20px;
     left: 64px;
+    font-size: 25px;
+    font-family: "Open Sans";
 }
 
 .like:hover {
@@ -548,6 +563,7 @@ figcaption {
 
 .comment {
 	position: relative;
+	list-style: none;
 }
 
 .comment p {
