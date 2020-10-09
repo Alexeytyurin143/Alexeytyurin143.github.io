@@ -559,39 +559,30 @@ figcaption {
 
 .comment img {
 	border-radius: 10px;
+	float: left;
 }
 
 .comment {
-	position: relative;
 	list-style: none;
 }
 
-.comment p {
-	position: absolute;
-	margin-top: 8px;
-}
-
-.comment:nth-child(2) {
-	margin-top: 31px;
-}
-
-.comment span {
+.comment_name {
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 22px;
-	position: absolute;
-	top: 13px;
-    left: 63px;
+	padding: 15px;
+    margin-left: 48px;
+    margin-bottom: 13px;
 }
 
 .comments {
-	height: 429px;
+	min-height: 429px;
 	background: #ece1e1;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 45px 0 79px 102px;
+	padding: 46px 0 46px 102px;
 }
 
 .comment_form {
