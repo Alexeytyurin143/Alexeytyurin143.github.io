@@ -43,6 +43,11 @@ h2 {
     text-transform: uppercase;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 /*Header*/
 
@@ -152,27 +157,35 @@ h2 {
     height: 576px;
 }
 
-.about_us_image {
-    float: left;
-    margin-right: 63px;
-    margin-bottom: 21px;
-}
-
 .about_us p {
     margin-bottom: 30px;
+}
+
+.about_us_content {
+    margin-left: 63px;
 }
 
 .statistics {
     width: 100%;
     background-color: #8D7370;
-    display: flex;
-    justify-content: space-around;
     color: white;
     font-weight: 500;
     font-size: 30px;
     line-height: 37px;
     text-align: center;
-    padding: 81px 45px;
+    padding: 81px 181px;
+    margin-top: 65px;
+}
+
+.about_us .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistics .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1040px;
 }
 
 .stat_item div:first-child {
@@ -187,11 +200,6 @@ h2 {
 
 .works_title {
     text-align: left;
-}
-
-.our_works {
-    margin: 0 auto;
-    width: 1200px;
 }
 
 .works {
@@ -273,6 +281,10 @@ h2 {
     right: -13px;
 }
 
+
+/* Team */
+
+
 .team {
     margin-top: 65px;
     background-color: #E2C4BA;
@@ -281,7 +293,7 @@ h2 {
 
 .team_members {
     display: flex;
-    margin: 0 182px;
+    margin: 0 82px;
     justify-content: space-between;
 }
 
@@ -299,7 +311,6 @@ h2 {
 
 .work_points {
     display: flex;
-    margin: 0 100px;
     justify-content: space-between;
     text-align: center;
 }
@@ -318,3 +329,21 @@ h2 {
     color: #fff;
     margin-bottom: 20px;
 }
+
+@media screen and (min-width: 1600px) {
+    .team .container {
+        max-width: 1400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
