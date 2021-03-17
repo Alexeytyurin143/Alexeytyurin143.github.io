@@ -27,6 +27,23 @@ button {
     background-color: inherit;
 }
 
+button,
+button:active,
+button:focus {
+    outline: none !important;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    padding-top: 65px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+
 /*Header*/
 
 
@@ -76,16 +93,16 @@ button {
     position: relative;
 }
 
-.head_top {
-    padding: 38px 100px 0;
-}
-
 .nav {
     display: flex;
     gap: 29px;
 }
 
-.slogan {
+
+/* Intro */
+
+
+.intro {
     background: url("../img/header_bg.jpg") no-repeat center;
     background-size: cover;
     height: 715px;
@@ -93,14 +110,14 @@ button {
     padding-left: 184px;
 }
 
-.slog_title {
+.intro_title {
     font-weight: normal;
     font-size: 50px;
     line-height: 62px;
     width: 534px;
 }
 
-.slog_article {
+.intro_article {
     width: 410px;
     margin-top: 20px;
 }
@@ -128,14 +145,6 @@ button {
 
 /*About us*/
 
-.title {
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 50px;
-    text-align: center;
-    margin-top: 65px;
-    margin-bottom: 40px;
-}
 
 .about_us {
     margin: 0 182px;
@@ -166,7 +175,7 @@ button {
     padding: 81px 45px;
 }
 
-.stat_item p:first-child {
+.stat_item div:first-child {
     font-size: 50px;
     line-height: 74px;
     font-weight: normal;
@@ -214,6 +223,7 @@ button {
     line-height: 37px;
     text-align: center;
     color: #FFFFFF;
+    padding: 0 109px;
 }
 
 .works_text {
@@ -240,6 +250,7 @@ button {
     line-height: 37px;
     color: #533738;
     padding-right: 76px;
+    transition: color .5s;
 }
 
 .view_more_btn::after {
@@ -255,8 +266,55 @@ button {
 
 .view_more_btn:hover {
     cursor: pointer;
+    color: #9b7879;
 }
 
 .view_more_btn:hover::after {
     right: -13px;
+}
+
+.team {
+    margin-top: 65px;
+    background-color: #E2C4BA;
+    padding-bottom: 80px;
+}
+
+.team_members {
+    display: flex;
+    margin: 0 182px;
+    justify-content: space-between;
+}
+
+.team_item {
+    width: 320px;
+}
+
+.team_title {
+    padding-top: 50px;
+}
+
+.how_title {
+    padding-top: 35px;
+}
+
+.work_points {
+    display: flex;
+    margin: 0 100px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.point_item {
+    width: 285px;
+}
+
+.point_number {
+    padding: 20px;
+    background-color: #8D7370;
+    border-radius: 50%;
+    width: 70px;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
 }
