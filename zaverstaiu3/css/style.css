@@ -46,6 +46,7 @@ h2 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
 }
 
 
@@ -178,12 +179,10 @@ h2 {
 }
 
 .about_us .container {
-    display: flex;
     justify-content: space-between;
 }
 
 .statistics .container {
-    display: flex;
     justify-content: space-between;
     max-width: 1040px;
 }
@@ -197,6 +196,10 @@ h2 {
 
 /*Our Works*/
 
+
+.our_works .container {
+    display: block;
+}
 
 .works_title {
     text-align: left;
@@ -309,6 +312,10 @@ h2 {
     padding-top: 35px;
 }
 
+.team .container {
+    display: block;
+}
+
 .work_points {
     display: flex;
     justify-content: space-between;
@@ -331,19 +338,58 @@ h2 {
 }
 
 @media screen and (min-width: 1600px) {
-    .team .container {
+    .team .container,
+    .reviews .container {
         max-width: 1400px;
     }
 }
 
 
+/* Reviews */
 
+.reviews {
+    margin-bottom: 65px;
+}
 
+.reviews .container {
+    justify-content: space-between;
+    align-items: center;
+}
 
+.arrow {
+    width: 72px;
+    margin-right: 81px;
+    height: 72px;
+    background: url("../img/arrow2.png") no-repeat center #CC8B86;
+    border-radius: 50%;
+    transition: box-shadow .5s;
+}
 
+.arrow:hover {
+    box-shadow: 0px 0px 10px 5px #CC8B86;
+}
 
+.left {
+    transform: rotate(180deg);
+    margin-left: 81px;
+    margin-right: 0;
+}
 
+.review_item {
+    display: flex;
+    width: 834px;
+    align-items: center;
+}
 
+.review p {
+    margin-bottom: 28px;
+}
 
+.review_image {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
 
-
+.author {
+    margin-bottom: 28px;
+}
