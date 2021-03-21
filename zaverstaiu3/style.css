@@ -262,6 +262,7 @@ h2 {
     color: #533738;
     padding-right: 76px;
     transition: .5s;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .view_more_btn::after {
