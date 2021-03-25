@@ -118,6 +118,10 @@ h1, h2, h3, h4, h5, h6, p, body {
     max-height: 310px;
 }
 
+.intro_right iframe {
+    border: none;
+}
+
 
 /* What we can */
 
