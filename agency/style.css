@@ -531,3 +531,12 @@ h1, h2, h3, h4, h5, h6, p, body {
     display: flex;
     gap: 20px;
 }
+
+.social a {
+    transition: .5s;
+    height: 35px;
+}
+
+.social a:hover {
+    transform: translate3d(0, -5px, 0);
+}
