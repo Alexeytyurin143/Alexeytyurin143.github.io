@@ -7,6 +7,17 @@ body {
     line-height: 28px;
 }
 
+input, textarea, button, a {
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+
+}
+
+
+input:focus, textarea:focus, button:focus {
+    outline: none;
+}
 .container {
     width: 1250px;
     margin: 0 auto;
@@ -14,6 +25,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, body {
     margin: 0;
+    padding: 0;
 }
 
 * {
@@ -39,15 +51,21 @@ h1, h2, h3, h4, h5, h6, p, body {
     box-shadow: 0px 0px 26px 8px #FF3F40;
 }
 
-.btn:focus {
-    outline: none;
-}
-
 .title {
     font-size: 42px;
     line-height: 55px;
     text-transform: uppercase;
     margin-bottom: 30px;
+}
+
+.line::after {
+    content: '';
+    width: 130px;
+    height: 2px;
+    background-color: #ff3f40;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
@@ -70,10 +88,9 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .nav_link {
     font-size: 14px;
-    color: #e0e0e0;
+    color: #fff;
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
     padding: 30px 25px;
     transition: .5s;
 }
@@ -209,11 +226,6 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .porfolio_description::after {
-    content: '';
-    width: 130px;
-    height: 2px;
-    background-color: #ff3f40;
-    position: absolute;
     top: 80px;
     left: 50%;
     transform: translate3d(-50%, 0 , 0);
@@ -230,7 +242,6 @@ h1, h2, h3, h4, h5, h6, p, body {
 .filter_item {
     text-transform: uppercase;
     font-size: 22px;
-    text-decoration: none;
     color: #000000;
     transition: .3s;
     font-weight: 600;
@@ -274,11 +285,6 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .team_description::after {
-    content: '';
-    width: 130px;
-    height: 2px;
-    background-color: #ff3f40;
-    position: absolute;
     top: 110px;
     left: 0;
 }
@@ -372,6 +378,7 @@ h1, h2, h3, h4, h5, h6, p, body {
     background-color: #ccc;
     text-align: center;
     padding: 140px 0;
+    margin-bottom: 85px;
 }
 
 .subscribe_title {
@@ -388,18 +395,139 @@ h1, h2, h3, h4, h5, h6, p, body {
     border-radius: 5px;
     border: 1px solid #fff;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
     width: 520px;
     transition: .5s;
     margin-right: 25px;
 }
 
 .input:focus {
-    outline: none;
     border-color: #ff3f40;
 }
 
 .subscribe_text {
     color: #fff;
     margin-bottom: 60px;
+}
+
+
+/* Message */
+
+
+.message {
+    margin-bottom: 115px;
+}
+
+.message_title {
+    margin-bottom: 35px;
+}
+
+.message .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.message_description {
+    width: 725px;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.message_description::after {
+    top: 135px;
+}
+
+.message_input {
+    width: 340px;
+    height: 70px;
+}
+
+.message_input,
+.message_text {
+    border: 1px solid;
+    border-color: transparent;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    padding: 20px 50px;
+    transition: .5s;
+}
+
+.message_input:focus,
+.message_text:focus {
+    border-color: #ff3f40;
+}
+
+.message_form {
+    max-width: 735px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 45px;
+}
+
+.message_text {
+    width: 730px;
+    height: 250px;
+    resize: none;
+}
+
+.message_btn {
+    width: 730px;
+}
+
+
+/* Contact */
+
+
+.contact {
+    background-color: #2D2D2D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 140px 210px 140px 80px;
+    position: absolute;
+    right: 0;
+}
+
+.contact_title {
+    font-size: 18px;
+    margin: 0;
+    line-height: normal;
+}
+
+.contact_inner {
+    width: 290px;
+}
+
+.contact_link {
+    display: block;
+}
+
+.contact_link:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+
+.footer {
+    background-color: #2D2D2D;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.copyright {
+    color: #B8B8B8;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
 }
