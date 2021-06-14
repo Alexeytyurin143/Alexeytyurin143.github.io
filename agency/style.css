@@ -14,12 +14,11 @@ input, textarea, button, a {
 
 }
 
-
 input:focus, textarea:focus, button:focus {
     outline: none;
 }
 .container {
-    width: 1250px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
@@ -68,15 +67,27 @@ h1, h2, h3, h4, h5, h6, p, body {
     left: 0;
 }
 
+.hide {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
 
 /* Header */
 
 
 .header {
     margin-top: 30px;
+    width: 100%;
     position: absolute;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
+    padding: 0 10px;
 }
 
 .header_nav {
@@ -92,11 +103,31 @@ h1, h2, h3, h4, h5, h6, p, body {
     font-weight: 700;
     text-transform: uppercase;
     padding: 30px 25px;
-    transition: .5s;
 }
 
 .nav_link:hover {
     background-color: #ff3f40;
+}
+
+.header.fixed {
+    position: fixed;
+    margin: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+.full_screen {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.full_screen > nav {
+    width: 100vw;
+    margin-left: -101%;
+}
+
+.container.full_screen {
+    padding: 0;
 }
 
 
@@ -105,12 +136,13 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .intro {
     background-color: #f6f2f2;
-    height: 690px;
+    min-height: 690px;
     padding-top: 210px;
 }
 
 .intro .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -139,6 +171,11 @@ h1, h2, h3, h4, h5, h6, p, body {
     border: none;
 }
 
+@media (max-width: 1300px) {
+    .intro_right {
+        margin: 40px 0;
+    }
+}
 
 /* What we can */
 
@@ -205,6 +242,17 @@ h1, h2, h3, h4, h5, h6, p, body {
     background: url("img/skills4.png") no-repeat;
 }
 
+@media (max-width: 1000px) {
+
+    .we_can_item {
+        width: auto;
+    }
+
+    .what_we_can .container {
+        flex-wrap: wrap;
+    }
+}
+
 
 /* Portfolio */
 
@@ -237,6 +285,7 @@ h1, h2, h3, h4, h5, h6, p, body {
     gap: 60px;
     margin-top: 110px;
     margin-bottom: 60px;
+    flex-wrap: wrap;
 }
 
 .filter_item {
@@ -255,6 +304,7 @@ h1, h2, h3, h4, h5, h6, p, body {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .products_item {
@@ -294,17 +344,17 @@ h1, h2, h3, h4, h5, h6, p, body {
     position: relative;
     padding-left: 390px;
     align-items: flex-end;
-    height: 460px;
+    min-height: 460px;
+    flex-wrap: wrap;
 }
 
 .team_item_image {
-    height: 460px;
+    min-height: 460px;
 }
 
 .team_item {
-    height: 215px;
+    min-height: 215px;
     position: relative;
-    cursor: pointer;
 }
 
 .member_name {
@@ -316,7 +366,7 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .team_text {
-    width: 670px;
+    max-width: 670px;
     margin-bottom: 30px;
 }
 
@@ -342,22 +392,24 @@ h1, h2, h3, h4, h5, h6, p, body {
 .team_unselected {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 235px;
 }
 
 .member_name.unselected {
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     width: 100%;
     text-align: center;
     margin: 0;
     background-color: rgba(0, 0, 0, .5);
     transition: .5s;
     vertical-align: middle;
-    height: 0;
+    max-height: 0;
 }
 
 .team_item:hover .member_name.unselected {
-    height: 42px;
+    max-height: 42px;
     padding: 7px;
 }
 
@@ -370,6 +422,20 @@ h1, h2, h3, h4, h5, h6, p, body {
     cursor: auto;
 }
 
+@media (max-width: 1300px) {
+
+    .team_members {
+        padding: 0;
+    }
+
+    .team_selected {
+        position: relative;
+    }
+
+    .team_unselected {
+        margin-top: 485px;
+    }
+}
 
 /* Subscribe */
 
@@ -409,6 +475,12 @@ h1, h2, h3, h4, h5, h6, p, body {
     margin-bottom: 60px;
 }
 
+@media (max-width: 1000px) {
+
+    .subscribe_btn {
+        margin-top: 15px;
+    }
+}
 
 /* Message */
 
@@ -425,6 +497,7 @@ h1, h2, h3, h4, h5, h6, p, body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .message_description {
@@ -439,7 +512,7 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .message_input {
     width: 340px;
-    height: 70px;
+    min-height: 70px;
 }
 
 .message_input,
@@ -467,7 +540,7 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .message_text {
     width: 730px;
-    height: 250px;
+    min-height: 250px;
     resize: none;
 }
 
@@ -508,6 +581,12 @@ h1, h2, h3, h4, h5, h6, p, body {
     text-decoration: underline;
 }
 
+@media (max-width: 1300px) {
+    .contact {
+        position: relative;
+        margin-top: 30px;
+    }
+}
 
 /* Footer */
 
@@ -534,9 +613,15 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 .social a {
     transition: .5s;
-    height: 35px;
+    min-height: 35px;
 }
 
 .social a:hover {
     transform: translate3d(0, -5px, 0);
+}
+
+@media (max-width: 1300px) {
+    .footer .container{
+        margin: 0 20px;
+    }
 }
